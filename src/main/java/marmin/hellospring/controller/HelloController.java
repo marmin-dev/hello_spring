@@ -1,4 +1,4 @@
-package marmin.hellospring.helloController;
+package marmin.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
