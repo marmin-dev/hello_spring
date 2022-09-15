@@ -1,6 +1,7 @@
 package marmin.hellospring;
 
 import marmin.hellospring.repository.JdbcMemberRepository;
+import marmin.hellospring.repository.JdbcTemplateMemberRepository;
 import marmin.hellospring.repository.MemberRepository;
 import marmin.hellospring.repository.MemoryMemberRepository;
 import marmin.hellospring.service.MemberService;
@@ -28,8 +29,9 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository(){
-
-        return new JdbcMemberRepository(dataSource);
+        //return new MemoryMemberRepository();
+       // return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 
